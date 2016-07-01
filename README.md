@@ -4,13 +4,11 @@
 
 ---
 
-## Пример использования
+## Примеры использования
 
 ```javascript
-const { Alga } = require('alga');
-
-let now = new Date();
-let alga = new Alga(now);
+const Alga = require('alga');
+let alga = new Alga();
 
 // Задаём брутто-зарплату ("на бумаге")
 alga.brutto = 700;
@@ -39,6 +37,15 @@ alga.dependents = 2;
 console.log(alga.netto);  // 580.15
 console.log(alga.iin);  // 46.35
 console.log(alga.benefits);  // { dependents: 350, extra: 0 }
+```
+
+Чтобы получить данные за предыдущий период, можно передать конструкторы объект `Date` (выбранная дата не должна быть раньше 1-го января 2010 года):
+
+```javascript
+const Alga = require('alga');
+const date = new Date('2014-05-01');
+
+let alga = new Alga(date);
 ```
 
 

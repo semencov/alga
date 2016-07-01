@@ -24,9 +24,14 @@ export default class Alga {
     const [dateSearch] = date.toISOString().split('T');
     const taxPeriods = Object.keys(taxRates);
     const index = _sortedIndex(taxPeriods, dateSearch);
+
+    if (index === 0) {
+      throw new Error("Library does not support dates before 2010-01-01");
+    }
+
     const period = taxPeriods[index - 1];
 
-    let data = {
+    _private.set(this, {
       rates: taxRates[period],
       options: _extend({
         dependents: 0,
@@ -47,9 +52,7 @@ export default class Alga {
       benefits: {dependents: 0, extra: 0},
       total: 0,
       exemptionLimit: 0
-    };
-
-    _private.set(this, data);
+    });
   }
 
   _calc (values = {}) {
