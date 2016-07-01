@@ -1,0 +1,37 @@
+{
+  "name": "alga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alga.js",
+  "scripts": {
+    "start": "chokidar src -c 'rollup -c'",
+    "test": "npm run lint",
+    "lint": "eslint src",
+    "build": "rollup -c"
+  },
+  "author": "Yuri Sementsov <hello@semencov.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "~6.9.0",
+    "babel-eslint": "~6.0.4",
+    "babel-plugin-check-es2015-constants": "^6.8.0",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-es2015-classes": "^6.9.0",
+    "babel-plugin-transform-es2015-computed-properties": "^6.8.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
+    "babel-plugin-transform-es2015-object-super": "^6.8.0",
+    "babel-plugin-transform-es2015-parameters": "^6.9.0",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.8.0",
+    "babel-plugin-transform-es2015-spread": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "chokidar-cli": "~1.2.0",
+    "eslint": "~2.10.2",
+    "eslint-config-tamia": "~2.0.1",
+    "rollup": "^0.33.0",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-json": "^2.0.1",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {}
+}

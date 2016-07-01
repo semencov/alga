@@ -1,0 +1,90 @@
+{
+  "2010-01-01": {
+    "currency": "LVL",
+    "incomeTaxRate": 26,
+    "riskFee": 0.25,
+    "socialTaxRates": [9, 7.06, 7.73],
+    "employerTaxRates": [24.09, 18.88, 20.68],
+    "exemptionLimit": 35,
+    "dependentBenefit": 63,
+    "invalidBenefit": [0, 108, 84],
+    "victimBenefit": 108
+  },
+  "2011-01-01": {
+    "currency": "LVL",
+    "incomeTaxRate": 25,
+    "riskFee": 0.25,
+    "socialTaxRates": [11, 9.2, 9.96],
+    "employerTaxRates": [24.09, 20.16, 21.82],
+    "exemptionLimit": 45,
+    "dependentBenefit": 70,
+    "invalidBenefit": [0, 108, 84],
+    "victimBenefit": 108
+  },
+  "2012-01-01": {
+    "currency": "LVL",
+    "incomeTaxRate": 25,
+    "riskFee": 0.25,
+    "socialTaxRates": [11, 9.5, 9.29],
+    "employerTaxRates": [24.09, 20.8, 22.53],
+    "exemptionLimit": 45,
+    "dependentBenefit": 70,
+    "invalidBenefit": [0, 108, 84],
+    "victimBenefit": 108
+  },
+  "2013-01-01": {
+    "currency": "LVL",
+    "incomeTaxRate": 24,
+    "riskFee": 0.25,
+    "socialTaxRates": [11, 9.45, 10.2],
+    "employerTaxRates": [24.09, 20.68, 22.35],
+    "exemptionLimit": 45,
+    "dependentBenefit": 70,
+    "invalidBenefit": [0, 108, 84],
+    "victimBenefit": 108
+  },
+  "2013-07-01": {
+    "currency": "LVL",
+    "incomeTaxRate": 24,
+    "riskFee": 0.25,
+    "socialTaxRates": [11, 9.45, 10.2],
+    "employerTaxRates": [24.09, 20.68, 22.35],
+    "exemptionLimit": 45,
+    "dependentBenefit": 80,
+    "invalidBenefit": [0, 108, 84],
+    "victimBenefit": 108
+  },
+  "2014-01-01": {
+    "currency": "EUR",
+    "incomeTaxRate": 24,
+    "riskFee": 0.36,
+    "socialTaxRates": [10.5, 8.96, 9.69],
+    "employerTaxRates": [23.59, 20.16, 21.79],
+    "exemptionLimit": 75,
+    "dependentBenefit": 165,
+    "invalidBenefit": [0, 154, 120],
+    "victimBenefit": 154
+  },
+  "2015-01-01": {
+    "currency": "EUR",
+    "incomeTaxRate": 23,
+    "riskFee": 0.36,
+    "socialTaxRates": [10.5, 8.84, 9.57],
+    "employerTaxRates": [23.59, 19.86, 21.5],
+    "exemptionLimit": 75,
+    "dependentBenefit": 165,
+    "invalidBenefit": [0, 154, 120],
+    "victimBenefit": 154
+  },
+  "2016-01-01": {
+    "currency": "EUR",
+    "incomeTaxRate": 23,
+    "riskFee": 0.36,
+    "socialTaxRates": [10.5, 8.85, 9.57],
+    "employerTaxRates": [23.59, 19.90, 21.51],
+    "exemptionLimit": 75,
+    "dependentBenefit": 175,
+    "invalidBenefit": [0, 154, 120],
+    "victimBenefit": 154
+  }
+}
