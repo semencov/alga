@@ -1,4 +1,4 @@
-import taxRates from './rates.json';
+import taxRates from "./rates.json";
 
 const _private = new WeakMap();
 
@@ -175,11 +175,11 @@ export default class Alga {
     }
   }
 
-  get isVictim () {
+  get victimStatus () {
     return _private.get(this).options.victimStatus;
   }
 
-  set isVictim (value) {
+  set victimStatus (value) {
     let data = {
       options: {
         victimStatus: !!value
