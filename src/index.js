@@ -1,4 +1,4 @@
-import taxRates from "./rates.json";
+import taxRates from "./rates.json"
 
 const _private = new WeakMap();
 
@@ -79,7 +79,8 @@ export default class Alga {
     data.vsaoi.employer = _round((data.brutto / 100) * rates.employerTaxRate);
     data.vsaoi.employee = _round((data.brutto / 100) * rates.socialTaxRate);
 
-    data.iin = data.brutto - data.vsaoi.employee - rates.exemptionLimit - data.benefits.dependents - data.benefits.extra;
+    data.iin = data.brutto - data.vsaoi.employee - rates.exemptionLimit - data.benefits.dependents -
+               data.benefits.extra;
     data.iin = Math.max(data.iin * rates.incomeTaxRate, 0);
     data.iin = Math.round(data.iin) / 100;
 
@@ -164,7 +165,8 @@ export default class Alga {
   }
 
   set invalidStatus (value) {
-    if (value in [Alga.INVALID_STATUS_NONE, Alga.INVALID_STATUS_CAT_I, Alga.INVALID_STATUS_CAT_II, Alga.INVALID_STATUS_CAT_III]) {
+    if (value in
+      [Alga.INVALID_STATUS_NONE, Alga.INVALID_STATUS_CAT_I, Alga.INVALID_STATUS_CAT_II, Alga.INVALID_STATUS_CAT_III]) {
       let data = {
         options: {
           invalidStatus: value
@@ -245,7 +247,9 @@ export default class Alga {
       riskFee: data.rates.riskFee,
       socialTaxRate: data.rates.socialTaxRates[data.options.pensionStatus],
       employerTaxRate: data.rates.employerTaxRates[data.options.pensionStatus],
-      exemptionLimit: (data.options.hasTaxBook && !(data.options.invalidStatus || data.options.pensionStatus)) ? data.rates.exemptionLimit : 0,
+      exemptionLimit: (data.options.hasTaxBook && !(data.options.invalidStatus || data.options.pensionStatus))
+        ? data.rates.exemptionLimit
+        : 0,
       dependentBenefit: data.options.hasTaxBook ? data.rates.dependentBenefit : 0,
       invalidBenefit: data.rates.invalidBenefit[data.options.invalidStatus],
       victimBenefit: data.options.victimStatus && data.options.hasTaxBook ? data.rates.victimBenefit : 0
@@ -259,7 +263,8 @@ function _extend (target, ...sources) {
       if (Object.prototype.hasOwnProperty.call(obj, prop)) {
         if (Object.prototype.toString.call(obj[prop]) === '[object Object]') {
           target[prop] = _extend(target[prop], obj[prop]);
-        } else {
+        }
+        else {
           target[prop] = obj[prop];
         }
       }
@@ -283,8 +288,9 @@ function _round (num) {
 }
 
 function _sortedIndex (haystack = [], needle) {
-  if (typeof haystack !== 'object')
+  if (typeof haystack !== 'object') {
     throw new Error("Haystack must be an Object");
+  }
 
   let arr = !Array.isArray(haystack) ? Object.keys(haystack) : haystack;
   arr.push(needle);
