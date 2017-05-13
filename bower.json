@@ -1,6 +1,7 @@
 {
   "name": "alga",
   "description": "Salary calculator for Latvian employees/employers",
+  "version": "1.0.2",
   "main": "alga.js",
   "keywords": [
     "salary",
@@ -18,5 +19,4 @@
     "test",
     "tests"
   ],
-  "version": "1.0.4"
 }
