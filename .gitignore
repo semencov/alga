@@ -1,5 +1,6 @@
-/.idea/
-/src/test/
-/node_modules/
-npm-debug.log
+/.idea
+/node_modules
+package-lock.json
+yarn.lock
+*.log
 test.js

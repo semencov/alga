@@ -1,15 +1,17 @@
 {
   "name": "alga",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Salary calculator for Latvian employees/employers",
-  "main": "alga.js",
+  "source": "src/index.js",
+  "main": "dist/alga.js",
+  "module": "dist/alga.esm.js",
+  "unpkg": "dist/alga.umd.js",
   "scripts": {
-    "start": "chokidar src -c 'rollup -c'",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint src",
-    "build": "rollup -c"
+    "lint": "eslint src/**/*.js",
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
-  "author": "Yuri Sementsov <hello@semencov.com>",
+  "author": "Yuri Sementsov <dev@smcv.me>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -19,27 +21,17 @@
     "url": "https://github.com/semencov/alga/issues"
   },
   "homepage": "https://github.com/semencov/alga",
+  "browserslist": "> 0.25%, not dead",
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "rules": {
+      "security/detect-unsafe-regex": "off",
+      "node/no-unpublished-require": "off"
+    }
+  },
   "devDependencies": {
-    "babel-cli": "~6.11.4",
-    "babel-eslint": "~6.1.2",
-    "babel-plugin-check-es2015-constants": "^6.8.0",
-    "babel-plugin-transform-class-properties": "^6.11.5",
-    "babel-plugin-transform-es2015-classes": "^6.9.0",
-    "babel-plugin-transform-es2015-computed-properties": "^6.8.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
-    "babel-plugin-transform-es2015-object-super": "^6.8.0",
-    "babel-plugin-transform-es2015-parameters": "^6.11.4",
-    "babel-plugin-transform-es2015-shorthand-properties": "^6.8.0",
-    "babel-plugin-transform-es2015-spread": "^6.8.0",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-preset-es2015-rollup": "^1.1.1",
-    "chokidar-cli": "~1.2.0",
-    "eslint": "~3.2.2",
-    "eslint-config-tamia": "~3.0.0",
-    "rollup": "^0.34.3",
-    "rollup-plugin-babel": "^2.6.1",
-    "rollup-plugin-json": "^2.0.1",
-    "rollup-plugin-uglify": "^1.0.1"
+    "microbundle": "^0.11.0",
+    "eslint": "^5.14.1"
   },
   "dependencies": {}
 }
